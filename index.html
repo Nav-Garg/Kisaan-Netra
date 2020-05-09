@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>KISAAN-NETRA</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="main/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+.goog-te-gadget img {
+    box-shadow: none;
+    
+}
+
+
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+    text-align: justify;
+  }  
+  .jumbotron {   
+    background: linear-gradient(to bottom, #33ccff 0%, #339966 73%);
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #2f65b5; 
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #2f3947;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    box-shadow:1px 10px 20px #362525;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  table{
+      width: 700px;
+    border: 10px 10px 10px #362525;;
+    height: 200px;
+      
+     box-shadow:10px 20px 10px #362525;
+  }
+  td, th {
+      padding: 0;
+    padding: 10px;
+    border-bottom: 3px solid #929292;
+    text-align: center;
+    border-right: solid 2px #999;
+    border-left: solid 2px #999;
+    border-top: solid 3px #999;
+  }
+  tr:hover {background-color: #d9d7d7;cursor: pointer;}
+  img {
+  vertical-align: middle;
+  box-shadow:1px 10px 20px #362525;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a href="#top"><img src="main/logo.png" alt="KISAAN-NETRA" width="100" height="60" align="left"> </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#background">BACKGROUND</a></li>
+        <li><a href="#background1">INFORMATION</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="main/index.html"> LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id = "top" class="jumbotron text-center">
+  <h1><strong>KISAAN - NETRA</strong></h1> <br><br>
+  <p>This project aims at providing precise information to farmers at their location regarding weather and other advisory services in order to help improve the quality and quantity of food production in a sustainable manner. 
+</p> 
+
+
+  <form>
+    <div class="input-group">
+     
+      </div>
+    </div>
+  </form>
+</div>
+<div id="google_translate_element" style="text-align: right; width: 100%"></div>
+
+ <script type="text/javascript">
+  function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- Container (About Section) -->
+<div id="background" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Background </h2><br>
+      <h4>"Agriculture is the backbone of the Indian Economy"- said Mahatma Gandhi six decades ago. Even today, the situation is still the same, with almost the entire economy being sustained by agriculture, which is the mainstay of the villages. It contributes 16% of the overall GDP and accounts for employment of approximately 52% of the Indian population. Rapid growth in agriculture is essential not only for self-reliance but also to earn valuable foreign exchange. 
+         <br> <br>Indian farmers are second to none in production and productivity despite of the fact that millions are marginal and small farmers. They adopt improved agriculture technology as efficiently as farmers in developed countries. It is felt that with provision of timely and adequate inputs such as fertilizers, seeds, pesticides and by making available affordable agricultural credit /crop insurance, Indian farmers are going to ensure food and nutritional security to the Nation.</h4><br>
+      <p>Source: <a href="https://farmer.gov.in/aboutus.aspx">farmer.gov.in</a>
+</p>
+      <br>
+    </div>
+    <div class="col-sm-4"><br>
+      <img src="farmers.jpg" alt="KISAAN-NETRA" width="400" height="400" align="left">
+    </div>
+  </div>
+</div>
+<div id="background1" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>Information related to Agriculture </h2><br>
+      <h4><p><strong>1.) AGRICULTURAL INSURANCE : PRADHAN MANTRI FASAL BIMA YOJANA (PMFBY)</strong></p>
+<p>What to do?</p>
+<ul>
+<li>Safeguard yourself financially against natural risks like natural disasters/ calamities, insect, pests &amp; diseases and adverse weather conditions.</li>
+<li>Take benefit of appropriate crop insurance scheme applicable in your area.</li>
+<li>Four insurance schemes are being implemented namely, Pradhan Mantri Fasal Bima Yojana (PMFBY), Weather Based Crop Insurance Scheme (WBCIS), Coconut Palm Insurance Scheme (CPIS) and Pilot Unified Package Insurance Scheme (UPIS) (45 districts).</li>
+<li>Coverage under PMFBY/WBCIS/CPIS/UPIS is compulsory, if you avail crop loan for notified crops.</li>
+<li>Coverage is voluntary for non-loanee farmers.</li>
+<li>Contact District Agriculture officers of State Govt./nearest branch of bank/PACS Common Service Centre (CSC) or crop insurance company operating in your area for availing the benefits under the Crop Insurance Scheme.</li>
+</ul>
+<p>&nbsp;</p>
+<p><strong>2) SOIL HEALTH CARD SOIL CONSERVATION AND MICRONUTRIENTS</strong></p>
+<p>What to Do?</p>
+<ul>
+<li>Always use appropriate fertilizer in right quantity based on soil test.</li>
+<li>Must use organic manures to maintain the fertility of soil.</li>
+<li>In order to get maximum benefit of the fertilizers, always apply in root zone instead of broadcasting.</li>
+<li>Resort to judicious and efficient use of Phosphatic Fertilizers for proper development of roots/shoots and timely maturity of crops, particularly the legumes which fix atmospheric Nitrogen for enrichment of soil.</li>
+<li>Farmers desirous of adopting Participatory Organic Guarantee System (PGS &ndash; India) Certification system may form a group of at least 5 farmers and get it registered with the nearest Regional Council or Regional Centre of Organic Farming.</li>
+<li><strong>Soil Health Card</strong>&nbsp;- Under the scheme, Soil Health card will be provided to all farm holdings in the country at an interval of 2 years so as to enable the farmers to apply appropriate recommended dosages of nutrients for crop production and improving soil health and its fertility</li>
+</ul>
+<h3>What Can You Get?</h3>
+<p><strong>Assistance for Soil Improvement</strong></p>
+<table>
+<tbody>
+<tr>
+<td width="47">
+<p><strong>S.No.</strong></p>
+</td>
+<td width="220">
+<p><strong>Type of Assistance</strong></p>
+</td>
+<td width="284">
+<p><strong>Criteria for Assistance / Maximum Limit</strong></p>
+</td>
+<td width="263">
+<p><strong>Scheme / Component</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p>1</p>
+</td>
+<td width="220">
+<p>Distribution of micronutrients and soil ameliorants</p>
+</td>
+<td width="284">
+<p>Rs.2500/- per hectare.</p>
+</td>
+<td width="263">
+<p>Soil Health card scheme</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>1a</p>
+</td>
+<td width="220">
+<p>Supply of gypsum phosphogypsum / bentonite sulphur. Wheat&amp; Pulses</p>
+</td>
+<td width="284">
+<p>50% cost of the material + transportation limited to&nbsp; Rs.750/- per hectare.</p>
+</td>
+<td width="263">
+<p>National Food Security Mission (NFSM), BGRE</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>2</p>
+</td>
+<td width="220">
+<p>Plant protection chemicals</p>
+</td>
+<td width="284">
+<p>Insecticides, fungicides, bio-pesticides, bio-agents, micronutrients, bio-fertilisers etc., @ 50% of the cost limited to Rs. 500/- per hectare.</p>
+</td>
+<td width="263">
+<p>National Food Security</p>
+<p>Mission (Oil Seed &amp; Oil Palm)/</p>
+<p>NFSM &amp; BGREI)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>3</p>
+</td>
+<td width="220">
+<p>Adoption of organic farming</p>
+</td>
+<td width="284">
+<p>Rs. 10,000 per hectare for maximum area of 4 ha per beneficiary spread over a period of 3 years involving assistance of Rs. 4000 in first year and Rs. 3000 each in second and third year</p>
+<p>.</p>
+</td>
+<td width="263">
+<p>National Horticulture Mission (NHM)/ Horticulture Mission for North-East and Himalayan States (HMNEH) Sub schemes under Mission for Integrated Development of Horticulture (MIDH)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>4</p>
+</td>
+<td width="220">
+<p>Vermi-Compost Unit</p>
+<p>(dimension of permanent</p>
+<p>structure to be</p>
+<p>administered on)</p>
+</td>
+<td width="284">
+<p>Rs. 50,000 /- per unit (having dimension of 30 ft x 8 ft x 2.5 ft or 600 cft, on prorata basis)</p>
+</td>
+<td width="263">
+<p>NHM/HMNEH Sub schemes<br /> under MIDH</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>5</p>
+</td>
+<td width="220">
+<p>High Density Poly Ethylene (HDPE) Vermi Bed</p>
+</td>
+<td width="284">
+<p>Rs. 8,000 /- per unit (having dimension</p>
+<p>of 12 ft x 4 ft x 2 ft or 96 cu ft, on</p>
+<p>prorata basis and is 15907:2010 to be</p>
+<p>administered on)</p>
+</td>
+<td width="263">
+<p>NHM/HMNEH Sub schemes under MIDH</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>6</p>
+</td>
+<td width="220">
+<p>Promotion of Integrated Nutrient<br /> Management</p>
+</td>
+<td width="284">
+<p>Rs.1200 /- per hectare (upto an area of 4 hectares)</p>
+</td>
+<td width="263">
+<p>NHM/HMNEH Sub schemes under MIDH</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>7</p>
+</td>
+<td width="220">
+<p>Supply of gypsum phosphogypsum / bentonite sulphur. Wheat&amp; Pulses</p>
+</td>
+<td width="284">
+<p>50% of the cost limited to Rs. 750/ - per hectare</p>
+</td>
+<td width="263">
+<p>National Food Security Mission (NFSM), BGREI</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>8</p>
+</td>
+<td width="220">
+<p>Micronutrients (Rice,</p>
+<p>Wheat, Pulses &amp; Nutri-</p>
+<p>Cereals)</p>
+</td>
+<td width="284">
+<p>50% of the cost limited to Rs. 500/- per hectare</p>
+</td>
+<td width="263">
+<p>NFSM, BGREI</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>9</p>
+</td>
+<td width="220">
+<p>Lime/liming materials (Rice</p>
+<p>&amp; Pulses)</p>
+</td>
+<td width="284">
+<p>50% of the cost of the material limited to<br /> Rs. 1000/ha.</p>
+</td>
+<td width="263">
+<p>NFSM, BGREI</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>10</p>
+</td>
+<td width="220">
+<p>Bio-fertilizers (Pulses Nurti-</p>
+<p>Cereals)</p>
+</td>
+<td width="284">
+<p>50% of the cost limited to Rs.300/- per ha.</p>
+</td>
+<td width="263">
+<p>BGREI /NFSM</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>11</p>
+</td>
+<td width="220">
+<p>Setting up of new Mobile/Static<br /> Soil Testing Laboratories (MSTL/<br /> SSTL) Training</p>
+</td>
+<td width="284">
+<p>33% of total project cost limited to Rs 25 lakhs /lab for individuals, private agencies through NABARD as capital investment for 10,000 samples/annum analysing capacity.</p>
+</td>
+<td width="263">
+<p>National Mission for Sustainable Agriculture (NMSA)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>12</p>
+</td>
+<td>
+<p>Setting up of state-of-the-art<br /> liquid/carrier based Biofertilizer /<br /> Biopesticide units</p>
+</td>
+<td>
+<p>25% of cost limited to Rs. 40 lakhs per unit for individuals/private agencies through NABARD as capital investment of 200 TPA production capacity</p>
+</td>
+<td width="263">
+<p>NMSA</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>13</p>
+</td>
+<td width="220">
+<p>Reclamation of Problem Soil</p>
+</td>
+<td width="284">
+<p>Alkaline / Saline Soil -&nbsp; Rs. 60,000&nbsp; per ha.</p>
+<p>Acidic Soil - Rs.15,000/- per ha</p>
+</td>
+<td width="263">
+<p>RKVY sub-scheme on</p>
+<p>Reclamation of Problem Soil</p>
+<p>(RPS).</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>14</p>
+</td>
+<td>
+<p>Setting up micro soil testing lab developed by ICAR</p>
+</td>
+<td>
+<p>44 % of the cost, limited to Rs 44,000 /lab or individuals/private agencies through NABARD as capital investment for 3000 TPA production capacity</p>
+</td>
+<td>
+<p>Soil Health Card</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>15</p>
+</td>
+<td>
+<p>Setting up soil testing project at village level</p>
+</td>
+<td>
+<p>75 % of the cost or Rs 3,75,000 /lab whichever is lower</p>
+</td>
+<td>
+<p>Soil Health Car</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>&nbsp;</p></h4><h4>
+<p><strong>3) AGRICULTURAL MARKETING</strong></p>
+<p>What to do?</p>
+<ul>
+<li>Farmer can get the price information of their produce which is available on AGMARKNET website (www.agmarknet.nic.in) or through Kisaan-netra Call Centres.</li>
+<li>Pull SMS to get information as and when you need is also available.</li>
+<li>Harvesting and threshing should be done at appropriate time.</li>
+<li>Proper grading, packing and labeling should be done before sale, for better prices.</li>
+<li>Transport of produce to proper market/mandi for getting remunerative price.</li>
+<li>Storage of produce should be done, for sale during off season, for maximum profit.</li>
+<li>Avoid distress sale.</li>
+<li>Farmers in a group may form marketing cooperatives and FPOs for better marketing reach.</li>
+<li>Marketing cooperatives may open retail and wholesale outlets.</li>
+<li>Farmers may also operate cold storages and warehouses to store the produce in order to avoid distress sale.</li>
+</ul>
+<p><strong>&nbsp;<em>National Agriculture Market (e-NAM)</em></strong></p>
+<p>With the objective to usher reforms in the agri- marketing sector and promote online marketing of agri commodities across the country and to provide maximum benefit to the farmers, the Government has approved a scheme to implement National Agriculture Market (NAM) on 01.07.2015. Under the scheme, a web based platform has been deployed across 585 regulated markets to promote online trading, digitalization of entire functioning of markets outline gate entry, lot making, bidding , generation of e-sale agreement and e- payment etc., remove information asymmetry, increase transparency in the transaction process and enhance accessibility to markets across the country . This would entail real benefits to the farmers. NAM pilot was launched on 14.04.2016 in 21 mandis of 8 states.</p>
+<p>&nbsp;</p>
+<p><strong>4) HORTICULTURE (CULTIVATION OF FRUITS, VEGETABLES AND FLOWERS FOR HIGHER INCOME)</strong></p>
+<p>What to do?</p>
+<ul>
+<li>Grow Horticultural Crops for higher income from lesser area.</li>
+<li>For healthy crop use high quality planting material.</li>
+<li>To keep fruits and vegetables fresh for longer period, use cold storage facility/cool houses.</li>
+<li>Earn maximum profit by adopting correct method of harvesting, cleaning, grading, processing and packaging.</li>
+<li>Produce off-season vegetables and flowers in poly-houses, low tunnels.</li>
+</ul><br><br>
+<p><strong>5) SEEDS</strong></p>
+<p>What to do?</p>
+<ul>
+<li>Always use recommended variety of seeds as per local climate and adopt recommended seed rate and other package of practices.</li>
+<li>Replace seeds of wheat, paddy, barley, pulses (except arhar), oilseeds (except rapeseed, mustard and sunflower) once in three years, seeds&nbsp; of maize, bajra, jowar, arhar, rapeseed, mustard and sunflower once in two years and hybrid seeds every year.</li>
+<li>Always purchase certified quality seeds from authorized agencies and store the seeds in a cool, dry and clean place.</li>
+<li>Always use treated seeds for sowing and test for quality parameters like purity, germination, free from weed seed etc. before sowing.</li>
+</ul></h4><br>
+      <p>Source: <a href=https://www.india.gov.in/spotlight/soil-health-card">india.gov.in</a>
+</p>
+      <br>
+    </div>
+    <div class="col-sm-4"><br><br><br>
+      <img src="info/modi.png" alt="KISAAN-NETRA" width="450" height="350" align="left">
+    </div>
+  </div>
+</div>
+
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Fill in your details below!</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact us!</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> New Delhi, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +011 25307700</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> kisaannetra@gmail.com</p>
+    </div>
+    
+    <form action='phone/adminPhoneNumber.php' class="form-group2" method='post'>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">Add Phone Number:
+          <strong></strong><input idclass="form-control" name="phone_no" maxlength="10" minlength="10" placeholder=" (without +91)" type="text" required style="width: 11em">
+        </div>
+        <div class="col-sm-6 form-group">
+          
+				<select class="form-control" id="email" name="state" placeholder="Select State/UT" type="text" required style="width: 16em" >
+                <option value="" selected="true" disabled="disabled">Select State/UT</option>    
+					<option value="Andhra Pradesh">Andhra Pradesh</option>
+					<option value="Arunachal Pradesh">Arunachal Pradesh</option>
+					<option value="Assam">Assam</option>
+					<option value="Bihar">Bihar</option>
+					<option value="Chhattisgarh">Chhattisgarh</option>
+					<option value="Goa">Goa</option>
+					<option value="Gujarat">Gujarat</option>
+					<option value="Haryana">Haryana</option>
+					<option value="Himachal Pradesh">Himachal Pradesh</option>
+					<option value="Jharkhand">Jharkhand</option>
+					<option value="Karnataka">Karnataka</option>
+					<option value="Kerala">Kerala</option>
+					<option value="Madhya Pradesh">Madhya Pradesh</option>
+					<option value="Maharashtra">Maharashtra</option>
+					<option value="Manipur">Manipur</option>
+					<option value="Meghalaya">Meghalaya</option>
+					<option value="Mizoram">Mizoram</option>
+					<option value="Nagaland">Nagaland</option>
+					<option value="Orissa">Orissa</option>
+					<option value="Punjab">Punjab</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Sikkim">Sikkim</option>
+					<option value="Tamil Nadu">Tamil Nadu</option>
+					<option value="Telagana">Telagana</option>
+					<option value="Tripura">Tripura</option>
+					<option value="Uttaranchal">Uttaranchal</option>
+					<option value="Uttar Pradesh">Uttar Pradesh</option>
+					<option value="West Bengal">West Bengal</option>
+                    <option value="" disabled>Union Territories:</option>
+					<option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+					<option value="Chandigarh">Chandigarh</option>
+					<option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+					<option value="Daman and Diu">Daman and Diu</option>
+					<option value="Delhi">Delhi</option>
+                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+					<option value="Ladakh">Ladakh</option>
+					<option value="Lakshadeep">Lakshadeep</option>
+					<option value="Pondicherry">Pondicherry</option>
+					
+				</select>
+        </div>
+      </div>Please enter your Full Name:
+      <input idclass="form-control" name="name" placeholder=" " type="text" required style="width: 16em"><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit" name="submit">Send</button>
+        </div>
+      </div>
+    </div>
+    	</form>	
+  </div>
+</div>
+
+	
+                
+                
+                 &nbsp;
+			
+				 &nbsp;
+          
+
+			 <br>	
+
+	
+
+<!-- Image of location/map -->
+<br><br><br><br>
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p><a href="#myPage" title="Visit us">A Non-profit Initiative</a></p>
+  <p><a href="#myPage" title="Creator">Website made by <em>Sarthak Avlash!</em> </a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+<!-- Start of ChatBot (www.chatbot.com) code -->
+<script type="text/javascript">
+    window.__be = window.__be || {};
+    window.__be.id = "5e53d390dd34490007cf8802";
+    (function() {
+        var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
+        be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
+    })();
+</script>
+<!-- End of ChatBot code -->
+</body>
+</html>

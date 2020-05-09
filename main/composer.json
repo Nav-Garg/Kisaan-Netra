@@ -1,0 +1,11 @@
+{
+    "require": {
+        "twilio/sdk": "^5.42"
+    }
+}
+
+{
+    "require": {
+        "statickidz/php-google-translate-free": "^1.1"
+    }
+}
